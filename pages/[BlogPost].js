@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { newsApiURL } from './index';
+import { gnewsAPI } from './index';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 // import { Context } from '../utils/context';
@@ -18,7 +18,7 @@ const BlogPost = () => {
   const [post, setPost] = useState({});
   const { query } = useRouter();
   const { data, error } = useSWR(
-    () => query.BlogPost && `${newsApiURL}`,
+    () => query.BlogPost && `${gnewsAPI}`,
     fetcher,
   );
   useEffect(() => {
