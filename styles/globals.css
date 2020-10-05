@@ -14,3 +14,24 @@ a {
 * {
   box-sizing: border-box;
 }
+:root {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: rgb(83, 80, 80);
+  width: 100vw;
+  height: 100px;
+  padding: 10px;
+  color: white;
+}
+
+.mcc {
+  padding: 30px;
+}
+
+.blog-snippet {
+  margin: 20px;
+  border: 5px solid black;
+}
