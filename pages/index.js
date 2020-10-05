@@ -3,7 +3,7 @@ import Header from '../components/Header/Header';
 import MainContentContainer from '../components/MainContentContainer';
 
 import styles from '../styles/Home.module.css';
-export const newsApiURL = `http://newsapi.org/v2/everything?q=bitcoin&from=2020-09-05&sortBy=publishedAt&apiKey=c3bffc473bea462087370971784df641`;
+export const newsApiURL = `https://newsapi.org/v2/everything?q=bitcoin&from=2020-09-05&sortBy=publishedAt&apiKey=c3bffc473bea462087370971784df641`;
 
 const fetcher = url => fetch(url).then(res => res.json());
 
