@@ -11,6 +11,7 @@ export default function Home() {
   const { data, error } = useSWR(newsApiURL, fetcher);
 
   if (error) return <div>Failed to load</div>;
+  console.log({ error });
   if (!data) return <div>Loading...</div>;
 
   return (
