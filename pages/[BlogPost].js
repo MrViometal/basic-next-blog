@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { gnewsAPI } from './index';
+import { gNewsAPI } from './index';
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 // import { Context } from '../utils/context';
@@ -18,7 +18,7 @@ const BlogPost = () => {
   const [post, setPost] = useState({});
   const { query } = useRouter();
   const { data, error } = useSWR(
-    () => query.BlogPost && `${gnewsAPI}`,
+    () => query.BlogPost && `${gNewsAPI}`,
     fetcher,
   );
   useEffect(() => {
@@ -30,8 +30,9 @@ const BlogPost = () => {
     <div style={{ padding: '30px' }}>
       {post && (
         <>
+          <img src={post.image} />
           <h1>{post.title}</h1>
-          <h2>By {post.author}</h2>
+          <h2>By {post.source?.name}</h2>
           <h6>published at {post.publishedAt}</h6>
           <p>{post.content}</p>
         </>
