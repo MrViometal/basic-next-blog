@@ -1,6 +1,4 @@
-import React from 'react';
 import BlogSnippet from './BlogSnippet';
-import Header from './Header/Header';
 
 const MainContentContainer = ({ snippets }) => {
   return (
